@@ -25,4 +25,4 @@ jobs:
       run: |
 
         echo "datetime_tag = $(date +%s)" >> $GITHUB_ENV
-        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$datetime_tag && docker push cnhefang/pythonwithansible:$datetime_tag
+        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:latest && docker push cnhefang/pythonwithansible:latest
