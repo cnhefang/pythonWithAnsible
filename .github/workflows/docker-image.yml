@@ -23,5 +23,6 @@ jobs:
         
     - name: Build the Docker image
       run: |
-        datetime_tag = $(date +%s)
-        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:${datetime_tag} && docker push cnhefang/pythonwithansible:${datetime_tag}
+
+        echo "datetime_tag = $(date +%s)" >> $GITHUB_ENV
+        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$datetime_tag && docker push cnhefang/pythonwithansible:$datetime_tag
