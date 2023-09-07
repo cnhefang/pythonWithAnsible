@@ -15,5 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: tag = $(date +%s)
-      run: docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$tag && docker push cnhefang/pythonwithansible:$tag
+      run: |
+        tag = $(date +%s)
+        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$tag && docker push cnhefang/pythonwithansible:$tag
