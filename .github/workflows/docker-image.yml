@@ -17,4 +17,4 @@ jobs:
     - name: Build the Docker image
       run: |
         set tag = $(date +%s)
-        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$tag && docker push cnhefang/pythonwithansible:$tag
+        docker build . --file Dockerfile --tag cnhefang/pythonwithansible:$(tag) && docker push cnhefang/pythonwithansible:($tag)
